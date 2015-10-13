@@ -24,12 +24,8 @@ class HomeController extends BaseController
 	 * Render the home view
 	 * @return Home view
 	 */
-    public function index(Request $request) {
-
-		if ($request->isMethod('post')) {
-			$this->searchHandle = $this->search();
-		}
-
-    	return view('home.index', ['results'=> '$this->searchData']);
-    }
+        public function index(Request $request) 
+        {
+    	    return view('home.index');
+    	}
 }
