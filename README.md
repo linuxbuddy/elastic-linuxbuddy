@@ -3,6 +3,7 @@ Linuxbuddy is a tool used to search for Linux distributed OS commands using the 
 ## Deployment
 Linuxbuddy-es uses a Ubuntu OS and Elasticsearch both running on a Vagrant box
 <br />
+<br />
 To run Linuxbuddy via Vagrant run these 2 simple commands
 <br />
 <br />
