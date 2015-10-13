@@ -5,8 +5,8 @@ Linuxbuddy-es uses a Ubuntu OS and Elasticsearch both running on a Vagrant box
 
 To run Linuxbuddy via Vagrant run these 2 simple commands
 
-  $ cd /path/to/linuxbuddy
-  $ vagrant up
+    $ cd /path/to/linuxbuddy
+    $ vagrant up
 
 Open up your browser at <code>127.0.0.1:3000</code>
 
