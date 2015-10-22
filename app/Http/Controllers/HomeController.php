@@ -28,24 +28,24 @@ class HomeController extends BaseController
 	 * Render the home view
 	 * @return Home view
 	 */
-    public function index(Request $request) 
-    {
-    	$results = null;
+    	public function index(Request $request) 
+    	{
+    		$results = null;
 
-    	if ($request->isMethod('post') 
-    		&& $request->input('search') != ''
-    	) {
-    		//TODO: Security issue! 
-    		//Need to add templating system for escaping
-    		//before hitting Elasticsearch.
-    		$results = $this->_searchData($request->input('search'));
-    	}
+    	    	if ($request->isMethod('post') 
+    	         	&& $request->input('search') != ''
+    	    	) {
+    			//TODO: Security issue! 
+    			//Need to add templating system for escaping
+    			//before hitting Elasticsearch.
+    			$results = $this->_searchData($request->input('search'));
+    	    	}
 
-	    return view('home.index', array(
-	    		'results' 	=> $results,
-	    		'search' 	=> $request->input('search')
-	    	)
-	    );
+		return view('home.index', array(
+				'results' 	=> $results,
+				'search' 	=> $request->input('search')
+		    	)
+		);
 	}
 
 	/**
