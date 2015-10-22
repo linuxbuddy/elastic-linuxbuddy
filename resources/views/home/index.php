@@ -24,10 +24,28 @@
         <form method="POST">
           <div class="form-group">
             <label for="search">Find Command</label>
-            <input type="search" class="form-control" id="search" placeholder="Search">
+            <input type="search" class="form-control" id="search" name="search" placeholder="Search" value="<?php echo $search;?>">
           </div>
           <div class="form-group">
-            <textarea class="form-control" rows="20" id="comment" placeholder="Search"></textarea>
+            <?
+              /**
+               * TODO: Replace all this with Twig or Blade
+               * Messy at the moment
+               */
+            ?>
+            <textarea class="form-control" rows="20" id="comment"><?php echo '----Results----&#10;';
+                if ($results) {
+                  foreach ($results as $key => $result) {
+                    echo 'Description: '.$result['description'].'&#10;';
+                    echo 'Commands: '.$result['command'].'&#10;';
+                    echo 'Operating System: '.$result['os'].'&#10;';
+                    echo '-----------------';
+                  }
+                } else {
+                  echo 'No commands found';
+                }
+              ?>
+            </textarea>
           </div>
           <button type="submit" class="btn btn-default">Search</button>
         </form>
