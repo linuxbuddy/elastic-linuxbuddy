@@ -47,7 +47,7 @@ class HomeController extends BaseController
 	    	)
 	    );
 	}
-
+	
 	/**
 	 * Insert some test data
 	 */
