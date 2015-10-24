@@ -10,4 +10,6 @@ To run Linuxbuddy via Vagrant run these 2 simple commands
 
 Open up your browser at <code>127.0.0.1:3000</code>
 
+<img src="https://raw.githubusercontent.com/linuxbuddy/linuxbuddy-es/master/public/Linuxbuddy.png" />
+
 If you don't have Vagrant you can install it here at <a href="http://www.vagrantup.com">vagrantup.com</a>
