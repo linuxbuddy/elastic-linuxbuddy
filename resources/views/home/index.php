@@ -9,6 +9,7 @@
 
     <!-- Bootstrap -->
     <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/github.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -33,19 +34,23 @@
                * Messy at the moment
                */
             ?>
-            <textarea class="form-control" rows="20" id="comment"><?php echo '----Results----&#10;';
-                if ($results) {
-                  foreach ($results as $key => $result) {
-                    echo 'Description: '.$result['description'].'&#10;';
-                    echo 'Commands: '.$result['command'].'&#10;';
-                    echo 'Operating System: '.$result['os'].'&#10;';
-                    echo '-----------------';
+            <?php echo '<h2>Results</h2>';
+                  if ($results) {
+                    foreach ($results as $key => $result) {
+                      $commands = explode(';', $result['command']);
+                      echo 'Commands: <br />';
+                      echo '<pre class="shell-style"><code data-language="shell">';
+                      echo '#'.$result['description'].'&#10;';
+                      foreach ($commands as $key => $command) {
+                        echo '$ '.$command.'&#10;';
+                      }
+                      echo '</pre></code>';
+                      echo 'Operating System: '.$result['os'].'<br />';
+                    }
+                  } else {
+                    echo 'No commands found';
                   }
-                } else {
-                  echo 'No commands found';
-                }
-              ?>
-            </textarea>
+                ?>
           </div>
           <button type="submit" class="btn btn-default">Search</button>
         </form>
@@ -56,5 +61,7 @@
     <script src="jquery/dist/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/rainbow.min.js"></script>
+    <script src="js/php.js"></script>
   </body>
 </html>
