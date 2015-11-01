@@ -58,6 +58,11 @@ sudo yum install elasticsearch --enablerepo elasticsearch-1.7 -y
 echo -e "\n--- Configuring Autostart Elasticsearch ---\n"
 sudo chkconfig --add elasticsearch
 
+echo -e "\n--- Installing PHP application dependecies via Composer ---\n"
+cd /vagrant/
+sudo php /usr/local/bin/composer install
+
+
 
 
 
