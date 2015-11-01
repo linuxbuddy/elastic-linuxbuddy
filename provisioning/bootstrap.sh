@@ -33,4 +33,7 @@ sudo cp /vagrant/provisioning/files/etc/httpd/conf.d/00-linuxbuddy.dev.conf /etc
 echo -e "\n--- Installing Webtatic Repo ---\n"
 sudo rpm -Uvh https://mirror.webtatic.com/yum/el6/latest.rpm
 
+echo -e "\n--- Installing PHP 5.6 ---\n"
+sudo yum install php56w php56w-opcache php56w-mbstring php56w-xml php56w-intl -y
+
 
