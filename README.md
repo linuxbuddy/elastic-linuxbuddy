@@ -2,6 +2,10 @@
 
 Linuxbuddy is a tool used to search for Linux distributed OS commands using the Lumen PHP Micro-Framework By Laravel with Elasticsearch
 
+## Deployment
+
+The easiest way to deploy Linuxbuddy-es is via Heroku.
+
 ## Development
 
 Linuxbuddy-es uses a Ubuntu OS and Elasticsearch both running on a Vagrant box
