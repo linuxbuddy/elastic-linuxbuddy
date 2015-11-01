@@ -65,7 +65,8 @@ sudo php /usr/local/bin/composer install
 echo -e "\n--- Starting Apache ---\n"
 sudo service httpd start
 
-
+echo -e "\n--- Starting Elasticsearch ---\n"
+sudo service elasticsearch start
 
 
 
