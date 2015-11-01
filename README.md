@@ -21,18 +21,18 @@ The easiest way to deploy LinuxBuddy (ES) is via Heroku.
 
 The virtual development environment for LinuxBuddy (ES) is configured with Vagrant.
 
-"Vagrant up" in the project directory.
+**Vagrant up**
 
     $ cd /path/to/linuxbuddy
     $ vagrant up
 
 Open up your browser at <code>192.168.100.4</code>
 
-Check commands are indexed in Elasticsearch.
+**Check commands are indexed in Elasticsearch**
 
 	curl -X POST http://localhost:9200/linux_buddy/commands/_search
 
-If LinuxBuddy commands are not indexed then there will be an `Elasticsearch\Common\Exceptions\Missing404Exception` in /storage/logs/lumen.log:
+If LinuxBuddy commands are not indexed then expect `Elasticsearch\Common\Exceptions\Missing404Exception` in /storage/logs/lumen.log:
 
 	{"error":"IndexMissingException[[linux_buddy] missing]","status":404}
 
