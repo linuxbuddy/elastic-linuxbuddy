@@ -42,5 +42,22 @@ curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/loca
 echo -e "\n--- Installing Java 1.7.0 ---\n"
 sudo yum install java-1.7.0-openjdk* -y 
 
+echo -e "\n--- Updating Yum Repository for Elasticsearch ---\n"
+cat > /etc/yum.repos.d/elasticsearch.repo <<EOF
+[elasticsearch-1.7]
+name=Elasticsearch repository for 1.7.x packages
+baseurl=http://packages.elastic.co/elasticsearch/1.7/centos
+gpgcheck=1
+gpgkey=http://packages.elastic.co/GPG-KEY-elasticsearch
+enabled=1
+EOF
+
+echo -e "\n--- Installing Elasticsearch ---\n"
+sudo yum install elasticsearch --enablerepo elasticsearch-1.7 -y
+
+echo -e "\n--- Configuring Autostart Elasticsearch ---\n"
+sudo chkconfig --add elasticsearch
+
+
 
 
