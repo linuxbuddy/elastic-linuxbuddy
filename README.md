@@ -8,7 +8,7 @@ The easiest way to deploy LinuxBuddy (ES) is via Heroku.
 
 ## Web Stack
 
-- Ubuntu (Operating System)
+- RHEL / CentOS 6
 - PHP 5.6
 - Apache 2.4
 - Elasticsearch 1.7
