@@ -30,3 +30,7 @@ sudo cp /vagrant/provisioning/files/etc/httpd/conf/httpd.conf /etc/httpd/conf/ht
 echo -e "\n--- Adding 00-linuxbuddy.dev.conf ---\n"
 sudo cp /vagrant/provisioning/files/etc/httpd/conf.d/00-linuxbuddy.dev.conf /etc/httpd/conf.d/00-linuxbuddy.dev.conf
 
+echo -e "\n--- Installing Webtatic Repo ---\n"
+sudo rpm -Uvh https://mirror.webtatic.com/yum/el6/latest.rpm
+
+
