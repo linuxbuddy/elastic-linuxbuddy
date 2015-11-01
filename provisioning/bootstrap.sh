@@ -36,4 +36,6 @@ sudo rpm -Uvh https://mirror.webtatic.com/yum/el6/latest.rpm
 echo -e "\n--- Installing PHP 5.6 ---\n"
 sudo yum install php56w php56w-opcache php56w-mbstring php56w-xml php56w-intl -y
 
+echo -e "\n--- Installing Composer ---\n"
+curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
 
