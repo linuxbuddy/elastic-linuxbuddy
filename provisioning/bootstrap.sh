@@ -62,6 +62,9 @@ echo -e "\n--- Installing PHP application dependecies via Composer ---\n"
 cd /vagrant/
 sudo php /usr/local/bin/composer install
 
+echo -e "\n--- Temp 777 permissions /vagrant/storage/logs/ ---\n"
+sudo chmod -R 777 /vagrant/storage/logs/
+
 echo -e "\n--- Starting Apache ---\n"
 sudo service httpd start
 
