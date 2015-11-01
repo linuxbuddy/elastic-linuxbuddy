@@ -26,7 +26,7 @@ The virtual development environment for LinuxBuddy (ES) is configured with Vagra
     $ cd /path/to/linuxbuddy
     $ vagrant up
 
-Open up your browser at <code>127.0.0.1:3000</code>
+Open up your browser at <code>192.168.100.4</code>
 
 <img src="https://raw.githubusercontent.com/linuxbuddy/linuxbuddy-es/master/public/Linuxbuddy.png" />
 
