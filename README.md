@@ -32,7 +32,7 @@ Check commands are indexed in Elasticsearch.
 
 	curl -X POST http://localhost:9200/linux_buddy/commands/_search
 
-If LinuxBuddy commands are not indexed then you will get the following `Elasticsearch\Common\Exceptions\Missing404Exception` exception in /storage/logs/lumen.log:
+If LinuxBuddy commands are not indexed then you will get `Elasticsearch\Common\Exceptions\Missing404Exception` in /storage/logs/lumen.log:
 
 	{"error":"IndexMissingException[[linux_buddy] missing]","status":404}
 
