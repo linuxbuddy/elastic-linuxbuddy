@@ -19,6 +19,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.provision "development", type: "shell" do |sh|
     sh.path = "provisioning/bootstrap.sh"
+    sh.args = "development"
   end
 
 end
