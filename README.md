@@ -32,7 +32,7 @@ Open up your browser at <code>192.168.100.4</code>
 
 	curl -X POST http://localhost:9200/linux_buddy/commands/_search
 
-If LinuxBuddy commands are not indexed then expect `Elasticsearch\Common\Exceptions\Missing404Exception` in /storage/logs/lumen.log:
+If LinuxBuddy commands are not indexed then expect: `Elasticsearch\Common\Exceptions\Missing404Exception` in /storage/logs/lumen.log:
 
 	{"error":"IndexMissingException[[linux_buddy] missing]","status":404}
 
