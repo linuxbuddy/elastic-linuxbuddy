@@ -13,7 +13,7 @@ The easiest way to deploy LinuxBuddy (ES) is via Heroku.
 - Apache 2.4
 - Elasticsearch 1.7
 
-## Dependencies
+## Application Dependencies
 
 - Elasticsearch Client
 
