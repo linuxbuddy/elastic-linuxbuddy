@@ -1,3 +1,8 @@
-/vendor
+# Vagrant
+.vagrant/
+
+# Vendor
+vendor/
+
+# Example
 .env.example
-bootstrap.sh

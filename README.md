@@ -1,14 +1,40 @@
-# linuxbuddy-es
-Linuxbuddy is a tool used to search for Linux distributed OS commands using the Lumen PHP Micro-Framework By Laravel with Elasticsearch
-## Deployment
-Linuxbuddy-es uses a Ubuntu OS and Elasticsearch both running on a Vagrant box
+# LinuxBuddy (ES)
 
-To run Linuxbuddy via Vagrant run these 2 simple commands
+LinuxBuddy is a tool used to search for Linux distributed OS commands using the Lumen PHP Micro-Framework By Laravel with Elasticsearch
+
+## Deployment
+
+The easiest way to deploy LinuxBuddy (ES) is via Heroku.
+
+## Web Stack
+
+- RHEL / CentOS 6
+- PHP 5.6
+- Apache 2.4
+- Elasticsearch 1.7
+
+## Application Dependencies
+
+- Elasticsearch Client
+
+## Development
+
+The virtual development environment for LinuxBuddy (ES) is configured with Vagrant.
+
+**Vagrant up**
 
     $ cd /path/to/linuxbuddy
     $ vagrant up
 
-Open up your browser at <code>127.0.0.1:3000</code>
+Open up your browser at <code>192.168.100.4</code>
+
+**Check commands are indexed in Elasticsearch**
+
+	curl -X POST http://localhost:9200/linux_buddy/commands/_search
+
+If LinuxBuddy commands are not indexed then expect: `Elasticsearch\Common\Exceptions\Missing404Exception` in /storage/logs/lumen.log:
+
+	{"error":"IndexMissingException[[linux_buddy] missing]","status":404}
 
 <img src="https://raw.githubusercontent.com/linuxbuddy/linuxbuddy-es/master/public/Linuxbuddy.png" />
 

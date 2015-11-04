@@ -63,5 +63,6 @@
     <script src="bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="js/rainbow.min.js"></script>
     <script src="js/php.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>
